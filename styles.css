@@ -305,6 +305,11 @@ a:hover {
   background: linear-gradient(135deg, var(--color-surface-elevated) 0%, #3a3834 100%);
   position: relative;
   overflow: hidden;
+  object-fit: cover;
+}
+
+.author-avatar[alt] {
+  animation: none;
 }
 
 .author-avatar::after {
