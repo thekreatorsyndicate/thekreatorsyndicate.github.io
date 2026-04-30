@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The Kreator Syndicate</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="progress-bar">
+    <div class="progress-bar-fill" id="progressFill"></div>
+  </div>
+
+  <div class="parallax-bg">
+    <div class="parallax-orb parallax-orb-1" id="orb1"></div>
+    <div class="parallax-orb parallax-orb-2" id="orb2"></div>
+  </div>
+
+  <div class="accent-rail"></div>
+
+  <div class="layout">
+    <div class="content-wrapper">
+      <article>
+
+        <h1 class="page-entrance">About</h1>
+
+        <div class="author page-entrance page-entrance-delay-1">
+          <div class="author-avatar"></div>
+          <div class="author-name">Swastik P. — Founder, The Kreator Syndicate</div>
+        </div>
+
+        <div class="section-intro page-entrance page-entrance-delay-2">
+          <p>I've been in the digital info space since I was 14.</p>
+          <p>It wasn't planned. It was survival.</p>
+        </div>
+
+        <div class="section">
+          <p>Money was always a problem growing up. When I hit high school, I started looking into the online money-making space seriously. Before that, I'd made some money combining programming and Minecraft by selling mods — but I lost basically all of it when it was stored in crypto. Lesson learned the hard way.</p>
+
+          <p>Around 15, I started binging business content. Around the same time, I met one of my mentors. He was an online coach making real money at 19. That's where I learned how the coaching space actually works — not the theory, the mechanics.</p>
+
+          <p>There, I met a few aspiring coaches who became close friends. We'd hop on calls day and night. I helped them start their businesses and make their first sales. They were the ones who told me I had a real knack for scaling online info businesses. That I should look into it more seriously.</p>
+
+          <p>So I did. I worked 1:1 with coaches, helped them grow. I spent most of my time learning everything about this space — so much so that I went from the top of my class in high school to almost failing at one point. The obsession came with a cost.</p>
+
+          <p>Now that I've graduated, after 3+ years of learning and doing, I feel competent enough to deliver real results. And I'm building The Kreator Syndicate to do it at scale.</p>
+
+          <p><strong class="highlight-blue">This isn't a course. It's not consulting. It's a system — and I've spent years building it.</strong></p>
+        </div>
+
+        <h2 class="reveal">Why The Kreator Syndicate exists</h2>
+
+        <div class="section">
+          <p>Most info-product businesses fail for the same reason: they're built around a person, not a system.</p>
+          <p>The creator burns out. The launches stop. The revenue drops to zero. And it starts over.</p>
+          <p>I've seen it happen enough times to know there's a better way. The businesses that scale past the $50k a month mark all share one thing: they have infrastructure. Systems for acquisition, conversion, delivery, and retention. Systems that run without the founder in every single piece.</p>
+          <p>That's what we build here. Eight operators at a time. With full attention. With a proven playbook. With someone who's been in the trenches and knows exactly what separates the ones that scale from the ones that stall.</p>
+          <p>If you're serious about building a real business — not just a job that pays better — you already know what to do.</p>
+          <p><a href="https://cal.com/swastikp/ccc" target="_blank" rel="noreferrer" class="cta-button">Apply for the June cohort</a></p>
+        </div>
+
+      </article>
+
+      <footer class="footer-note">
+        <p><a href="index.html" style="color: var(--color-blue); text-decoration: underline;">Back to The Kreator Syndicate</a></p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const progressFill = document.getElementById('progressFill');
+      const reveals = document.querySelectorAll('.reveal');
+      const orbs = [document.getElementById('orb1'), document.getElementById('orb2')];
+
+      function initAnimations() {
+        reveals.forEach(el => el.classList.add('reveal-visible'));
+      }
+
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        if (progressFill) progressFill.style.transform = `scaleX(${progress})`;
+
+        reveals.forEach(el => {
+          if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+            el.classList.add('reveal-visible');
+          }
+        });
+      }
+
+      function updateParallax() {
+        const scrolled = window.scrollY;
+        orbs.forEach((orb, i) => {
+          if (orb) orb.style.transform = `translateY(${scrolled * (0.1 + i * 0.05)}px)`;
+        });
+      }
+
+      initAnimations();
+
+      window.addEventListener('scroll', () => {
+        updateProgress();
+        updateParallax();
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
