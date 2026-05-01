@@ -164,7 +164,7 @@
 
         <p>If that's you, here's how to get started:</p>
 
-        <p><strong>Step 1:</strong> <a href="https://cal.com/swastikp/ccc" target="_blank" rel="noreferrer" class="cta-button">Apply for the June cohort</a></p>
+        <p><strong>Step 1:</strong> <button class="cta-button" id="applyBtn">Apply for the June cohort</button></p>
         <p>8 operators per quarter. 48-hour response time. If it's not a fit, we'll tell you exactly what to work on first.</p>
         <p><strong>Step 2:</strong> We'll review your application within 48 hours. If you're a fit, we'll book a strategy call to map out exactly what Phase 1 looks like for your business.</p>
         <p>If it's not the right time, we'll point you in the right direction. No hard feelings.</p>
@@ -239,6 +239,14 @@
         updateParallax();
       }, { passive: true });
     })();
+
+    // Cal.com popup
+    document.getElementById('applyBtn').addEventListener('click', function() {
+      var w = 1024, h = 750;
+      var left = (window.screen.width - w) / 2;
+      var top = (window.screen.height - h) / 2;
+      window.open('https://cal.com/swastikp/ccc', 'cal-popup', 'width=' + w + ',height=' + h + ',left=' + left + ',top=' + top + ',scrollbars=yes,resizable=yes');
+    });
   </script>
 </body>
 </html>
