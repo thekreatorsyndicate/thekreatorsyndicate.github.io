@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Kreator Syndicate</title>
+  <meta name="description" content="We help info-product creators build scalable businesses through proprietary systems — from validated offers to evergreen revenue engines. 8 operators per quarter.">
+  <meta property="og:title" content="The Kreator Syndicate">
+  <meta property="og:description" content="Turn your expertise into a business that scales — without trading every hour for every dollar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thekreatorsyndicate.github.io/">
+  <meta property="og:image" content="https://rddi4oqi0m.ufs.sh/f/R4O1Bn3aTOy5FmR2vTVdACr0Wx5XHZioztDKlwYIM2TQnBbV">
   <link rel="stylesheet" href="./styles.css">
 
   <script type="text/javascript">
@@ -138,7 +144,7 @@
         <ol>
           <li>Every 6 weeks we run a <strong>Cycle Sprint<sup>&trade;</sup></strong> — we map your current constraint, select the next system to install, set the metrics target, and hold you accountable to shipping it. No six-month strategy docs that collect dust. Six-week cycles that compound.</li>
           <li>You'll have direct access to our team for strategy reviews, campaign critiques, and unblocking decisions. A quick message gets you a clear answer. No waiting for your next call slot.</li>
-          <li>We run monthly<strong> Operator Sessions<sup>&trade;</sup></strong> — calls on advanced acquisition, scaling delivery, team structuring, and pricing strategy with operators at the same level as you.</li>
+          <li>We run monthly <strong>Operator Sessions<sup>&trade;</sup></strong> — calls on advanced acquisition, scaling delivery, team structuring, and pricing strategy with operators at the same level as you.</li>
           <li>Our <strong>Evergreen Revenue Engine<sup>&trade;</sup></strong> goes live in Phase 3. This is the system that generates qualified leads and converts them without you personally running every launch. Paid and organic acquisition, automated nurture, and a sales process that runs whether you're working or not.</li>
         </ol>
 
@@ -190,65 +196,42 @@
   </div>
 
   <script>
-    // Scroll progress and reveal interactions
     (function() {
       const progressFill = document.getElementById('progressFill');
       const reveals = document.querySelectorAll('.reveal');
-      const hs = document.querySelectorAll('h2');
       const orbs = [document.getElementById('orb1'), document.getElementById('orb2')];
-      
-      function initAnimations() {
-        // Immediately show all reveals and h2s
-        reveals.forEach(el => el.classList.add('reveal-visible'));
-        hs.forEach(el => el.classList.add('visible'));
-        const staggers = document.querySelectorAll('.stagger-children');
-        staggers.forEach(el => el.classList.add('visible'));
-      }
-      
+
       function updateProgress() {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = docHeight > 0 ? scrollTop / docHeight : 0;
-        
-        if (progressFill) {
-          progressFill.style.transform = `scaleX(${progress})`;
-        }
-        
-        // Reveal on scroll
+        if (progressFill) progressFill.style.transform = `scaleX(${progress})`;
+
         reveals.forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight * 0.85) {
+          if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
             el.classList.add('reveal-visible');
           }
         });
       }
-      
-      // Parallax orbs
+
       function updateParallax() {
         const scrolled = window.scrollY;
         orbs.forEach((orb, i) => {
-          if (orb) {
-            const speed = 0.1 + (i * 0.05);
-            orb.style.transform = `translateY(${scrolled * speed}px)`;
-          }
+          if (orb) orb.style.transform = `translateY(${scrolled * (0.1 + i * 0.05)}px)`;
         });
       }
-      
-      // Init on load
-      initAnimations();
-      
+
+      updateProgress();
+
       window.addEventListener('scroll', () => {
         updateProgress();
         updateParallax();
       }, { passive: true });
     })();
 
-    // Cal.com popup
+    // Cal.com — open in new tab
     document.getElementById('applyBtn').addEventListener('click', function() {
-      var w = 1024, h = 750;
-      var left = (window.screen.width - w) / 2;
-      var top = (window.screen.height - h) / 2;
-      window.open('https://cal.com/swastikp/ccc', 'cal-popup', 'width=' + w + ',height=' + h + ',left=' + left + ',top=' + top + ',scrollbars=yes,resizable=yes');
+      window.open('https://cal.com/swastikp/ccc', '_blank');
     });
   </script>
 </body>
