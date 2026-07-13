@@ -1,6 +1,6 @@
 # The Kreator Syndicate
 
-**[Applications for our June cohort are open — limited to 8 coaches]**
+**[July client availability — ~~6 spots~~ · 3 spots available]**
 
 Most experts are building a job, not a business.
 
@@ -161,7 +161,7 @@ That is what it looks like when an info-product business works properly.
 
 ## Here is who this is built for
 
-We take on 8 operators per quarter.
+We take on a limited number of clients each month.
 Not because we want to sound exclusive.
 Because attention gets thin when it is spread too wide, and thin attention produces thin results.
 
@@ -175,9 +175,9 @@ You are a strong fit if:
 
 If that sounds like you, here is how to get started.
 
-**Step 1:** Apply for the June cohort.
+**Step 1:** Apply to work with us in July.
 
-8 operators per quarter.
+~~6 client spots~~. Only 3 spots available in July.
 48-hour response time.
 If it is not a fit, we will tell you what to work on first.
 
@@ -202,5 +202,4 @@ And the best systems are built methodically, in sequence, with someone who has d
 
 That is what we do.
 Eight operators at a time.
-Apply while the June cohort still has spots.
-
+Apply while the 3 July spots are still available.
